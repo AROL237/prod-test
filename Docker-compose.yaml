@@ -1,22 +1,6 @@
 version: '3.1'
 
 services:
-#
-#  backend:
-#    image: backend_api:1.0
-#    ports:
-#      - 8080:8080
-#    environment:
-#      DB_USERNAME: root
-#      DB_PASSWORD: Nzonkem@237
-#      DB_PORT: 3308
-#      DB_DATABASE: prod_db
-#      PROFILE: prod
-#      DB_HOST: database
-#    depends_on:
-#      - database
-#    networks:
-#      database-net:
   adminer:
     image: adminer
     restart: always
@@ -28,7 +12,7 @@ services:
     image: mysql:latest
     restart: always
     ports:
-      - 3308:3306
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: Nzonkem@237
       MYSQL_USER: admin
